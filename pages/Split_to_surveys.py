@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 import pandas as pd
 import streamlit as st
 from utils import data_handler
@@ -6,6 +7,8 @@ from utils import data_handler
 st.set_page_config(layout="wide")
 
 st.header("Data")
+
+uploadedfiles = st.session_state.fileUploader
 
 #If a dataset is uploaded, show a preview
 if uploadedfiles is not None:
