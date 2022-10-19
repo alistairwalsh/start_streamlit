@@ -40,4 +40,14 @@ if uploadedfiles is not None:
         data = pd.read_excel(f)
         survey_col_list = data_handler.slicer(data)
         for c in survey_col_list:
-            st.dataframe(data_handler.dropper(data[c]).dropna(how='all').head())
+            st.dataframe(data_handler.dropper(data[c]).head())
+
+            csv = data_handler.convert_df(data_handler.dropper(data[c]))
+
+            st.download_button(
+                "Press to Download",
+                csv,
+                "start_data.csv",
+                "text/csv",
+                key='start_data'
+)
