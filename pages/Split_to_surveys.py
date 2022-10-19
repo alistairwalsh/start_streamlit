@@ -1,14 +1,11 @@
 import pandas as pd
 import streamlit as st
-from atom import ATOMClassifier
 from utils import data_handler
 
 # Expand the web app across the whole screen
 st.set_page_config(layout="wide")
 
 st.header("Data")
-
-
 
 #If a dataset is uploaded, show a preview
 if uploadedfiles is not None:
