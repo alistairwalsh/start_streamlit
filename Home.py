@@ -24,12 +24,12 @@ models = {
 
 
 st.header("Data")
-uploadedfile = st.file_uploader("Upload data:", type=['xlsx'],accept_multiple_files=False,key="fileUploader")
+uploadedfile = st.file_uploader("Upload data:", type=['xlsx'],accept_multiple_files=True,key="fileUploader")
 
 st.write(uploadedfile)
 st.write(uploadedfile.name)
 # If a dataset is uploaded, show a preview
-if uploadedFile is not None:
+if uploadedfile is not None:
     data = pd.read_excel(uploadedfile)
     st.text("Data preview:")
     st.dataframe(data.head())
