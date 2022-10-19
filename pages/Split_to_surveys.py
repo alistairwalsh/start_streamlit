@@ -21,6 +21,7 @@ if uploadedfiles is not None:
     for f in uploadedfiles:
         data = pd.read_excel(f)
         survey_col_list = data_handler.slicer(data)
+        
         for c in survey_col_list:
             st.dataframe(data_handler.dropper(data[c]).head())
 
