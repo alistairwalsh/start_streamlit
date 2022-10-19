@@ -32,6 +32,12 @@ uploadedfiles = st.file_uploader("Upload data:", type=['xlsx'],accept_multiple_f
 if uploadedfiles is not None:
     for f in uploadedfiles:
         data = pd.read_excel(f)
-        st.write(data_handler.slicer(data))
         st.write("Data preview:", f.name)
         st.dataframe(data.head())
+
+if uploadedfiles is not None:
+    for f in uploadedfiles:
+        data = pd.read_excel(f)
+        survey_col_list = data_handler.slicer(data)
+        for c in survey_col_list:
+            st.dataframe(data[c].head())
