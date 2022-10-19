@@ -22,12 +22,9 @@ models = {
     "lgb": st.sidebar.checkbox("LightGBM", False, "lgb"),
 }
 
-
 st.header("Data")
 
 uploadedfiles = st.file_uploader("Upload data:", type=['xlsx'],accept_multiple_files=True,key="fileUploader")
-
-st.write(uploadedfiles)
 
 #If a dataset is uploaded, show a preview
 if uploadedfiles is not None:
