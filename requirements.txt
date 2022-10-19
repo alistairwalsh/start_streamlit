@@ -1,1 +1,3 @@
 atom-ml
+pandas
+openpyxl
