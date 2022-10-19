@@ -29,13 +29,9 @@ uploadedfiles = st.file_uploader("Upload data:", type=['xlsx'],accept_multiple_f
 
 st.write(uploadedfiles)
 
-[st.write(file.name) for file in uploadedfiles]
-
-
 #If a dataset is uploaded, show a preview
 if uploadedfiles is not None:
     for f in uploadedfiles:
         data = pd.read_excel(f)
-        st.write(f.name)
         st.write("Data preview:", f.name)
         st.dataframe(data.head())
