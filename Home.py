@@ -29,6 +29,6 @@ uploadedFile = st.file_uploader("Upload data:", type=['xlsx'],accept_multiple_fi
 st.write(uploadedFile)
 # If a dataset is uploaded, show a preview
 if uploadedFile is not None:
-    data = pd.read_excel(data)
+    data = pd.read_excel(uploadedFile)
     st.text("Data preview:")
     st.dataframe(data.head())
