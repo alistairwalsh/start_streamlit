@@ -8,6 +8,10 @@ def slicer(day):
 
     return [day.loc[:,i:ii].columns.tolist()[:-1] for i,ii in zip(created_list, created_list[1:])]
 
+def dropper(df):
+    c_drop = df.filter(regex = ['modified','modified_by']).columns
+    return df.drop(columns = c_drop)
+
 
 #not finished
 

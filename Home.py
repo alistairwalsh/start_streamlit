@@ -40,4 +40,4 @@ if uploadedfiles is not None:
         data = pd.read_excel(f)
         survey_col_list = data_handler.slicer(data)
         for c in survey_col_list:
-            st.dataframe(data[c].dropna(how='all').head())
+            st.dataframe(data_handler.dropper(data[c]).dropna(how='all').head())
