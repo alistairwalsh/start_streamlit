@@ -26,7 +26,7 @@ models = {
 st.header("Data")
 uploadedFile = st.file_uploader("Upload data:", type=['xlsx'],accept_multiple_files=False,key="fileUploader")
 
-st.write(uploadedFiles)
+st.write(uploadedFile)
 # If a dataset is uploaded, show a preview
 if uploadedFile is not None:
     data = pd.read_excel(data)
