@@ -22,7 +22,7 @@ else:
             survey_col_list = data_handler.slicer(data)
 
             for c in survey_col_list:
-                st.dataframe(data_handler.dropper(data[c]).head())
+                st.dataframe(data_handler.dropper(data[c]))
 
                 csv = data_handler.convert_df(data_handler.dropper(data[c]))
 
