@@ -32,6 +32,7 @@ st.write(uploadedfiles)
 [st.write(file.name) for file in uploadedfiles]
 #If a dataset is uploaded, show a preview
 if uploadedfiles is not None:
-    data = pd.read_excel(uploadedfiles[0])
-    st.text("Data preview:")
-    st.dataframe(data.head())
+    for n,f in enumerate(uploadedfiles):
+        data = pd.read_excel(uploadedfiles[n])
+        st.text("Data preview:", n)
+        st.dataframe(data.head())
