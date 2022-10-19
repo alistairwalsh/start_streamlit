@@ -27,7 +27,7 @@ st.header("Data")
 uploadedfile = st.file_uploader("Upload data:", type=['xlsx'],accept_multiple_files=True,key="fileUploader")
 
 st.write(uploadedfile)
-st.write(uploadedfile.name)
+st.write(uploadedfile[0].name)
 # If a dataset is uploaded, show a preview
 if uploadedfile is not None:
     data = pd.read_excel(uploadedfile)
