@@ -3,7 +3,10 @@ def slicer(df):
     '''
     finds the column 'created' and uses that to split forms
     '''
+
+    first_value = df.columns[0]
     created_list = df.filter(regex='created').columns.tolist()
+    created_list.insert(0, first_value)
     return [df.loc[:,i:ii].columns.tolist()[1:-1] for i,ii in zip(created_list, created_list[1:])]
 
 def dropper(df):
