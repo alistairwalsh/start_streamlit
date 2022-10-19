@@ -32,6 +32,6 @@ uploadedfiles = st.file_uploader("Upload data:", type=['xlsx'],accept_multiple_f
 if uploadedfiles is not None:
     for f in uploadedfiles:
         data = pd.read_excel(f)
-        st.wite(data_handler(data))
+        st.write(data_handler(data))
         st.write("Data preview:", f.name)
         st.dataframe(data.head())
