@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-from atom import ATOMClassifier
 from utils import data_handler
 
 # Expand the web app across the whole screen
