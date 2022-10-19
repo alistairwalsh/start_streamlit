@@ -34,5 +34,6 @@ st.write(uploadedfiles)
 if uploadedfiles is not None:
     for n,f in enumerate(uploadedfiles):
         data = pd.read_excel(f)
-        st.text("Data preview:", n)
+        st.write(n)
+        st.text("Data preview:")
         st.dataframe(data.head())
