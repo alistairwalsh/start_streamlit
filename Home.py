@@ -24,8 +24,7 @@ models = {
 
 
 st.header("Data")
-if uploadedfiles:
-    uploadedfiles.clear()
+
 uploadedfiles = st.file_uploader("Upload data:", type=['xlsx'],accept_multiple_files=True,key="fileUploader")
 
 st.write(uploadedfiles)
