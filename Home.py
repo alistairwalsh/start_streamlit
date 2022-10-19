@@ -25,6 +25,8 @@ models = {
 
 st.header("Data")
 uploadedFiles = st.file_uploader("Upload data:", type=['csv','xlsx'],accept_multiple_files=True,key="fileUploader")
+
+st.write(uploadedFiles)
 # If a dataset is uploaded, show a preview
 # if datuploadedFilea is not None:
 #     data = pd.read_csv(data)
