@@ -21,3 +21,12 @@ models = {
     "xgb": st.sidebar.checkbox("XGBoost", False, "xgb"),
     "lgb": st.sidebar.checkbox("LightGBM", False, "lgb"),
 }
+
+
+st.header("Data")
+data = st.file_uploader("Upload data:", type="csv")
+# If a dataset is uploaded, show a preview
+if data is not None:
+    data = pd.read_csv(data)
+    st.text("Data preview:")
+    st.dataframe(data.head())
