@@ -8,28 +8,33 @@ st.set_page_config(layout="wide")
 
 st.header("Data")
 
-uploadedfiles = st.session_state.fileUploader
+if 'fileUploader' not in st.session_state:
+    st.write('Please upload a datafile at home page')
 
-#If a dataset is uploaded, show a preview
-if uploadedfiles is not None:
-    for f in uploadedfiles:
-        data = pd.read_excel(f)
-        st.write("Data preview:", f.name)
-        st.dataframe(data.head())
+else:
 
-if uploadedfiles is not None:
-    for f in uploadedfiles:
-        data = pd.read_excel(f)
-        survey_col_list = data_handler.slicer(data)
-        
-        for c in survey_col_list:
-            st.dataframe(data_handler.dropper(data[c]).head())
+    uploadedfiles = st.session_state.fileUploader
 
-            csv = data_handler.convert_df(data_handler.dropper(data[c]))
+    #If a dataset is uploaded, show a preview
+    if uploadedfiles is not None:
+        for f in uploadedfiles:
+            data = pd.read_excel(f)
+            st.write("Data preview:", f.name)
+            st.dataframe(data.head())
 
-            st.download_button(
-                "Press to Download",
-                csv,
-                "start_data.csv",
-                "text/csv"
-)
+    if uploadedfiles is not None:
+        for f in uploadedfiles:
+            data = pd.read_excel(f)
+            survey_col_list = data_handler.slicer(data)
+
+            for c in survey_col_list:
+                st.dataframe(data_handler.dropper(data[c]).head())
+
+                csv = data_handler.convert_df(data_handler.dropper(data[c]))
+
+                st.download_button(
+                    "Press to Download",
+                    csv,
+                    "start_data.csv",
+                    "text/csv"
+                )
