@@ -48,6 +48,5 @@ if uploadedfiles is not None:
                 "Press to Download",
                 csv,
                 "start_data.csv",
-                "text/csv",
-                key='start_data'
+                "text/csv"
 )
