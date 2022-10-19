@@ -37,5 +37,5 @@ if uploadedfiles is not None:
     for f in uploadedfiles:
         data = pd.read_excel(f)
         st.write(f.name)
-        st.text("Data preview:", f.name)
+        st.write("Data preview:", f.name)
         st.dataframe(data.head())
