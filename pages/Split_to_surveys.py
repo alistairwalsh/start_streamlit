@@ -15,13 +15,6 @@ else:
 
     uploadedfiles = st.session_state.fileUploader
 
-    #If a dataset is uploaded, show a preview
-    if uploadedfiles is not None:
-        for f in uploadedfiles:
-            data = pd.read_excel(f)
-            st.write("Data preview:", f.name)
-            st.dataframe(data.head())
-
     if uploadedfiles is not None:
         for f in uploadedfiles:
             data = pd.read_excel(f)
