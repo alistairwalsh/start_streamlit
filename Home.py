@@ -24,9 +24,9 @@ models = {
 
 
 st.header("Data")
-data = st.file_uploader("Upload data:", type="csv")
+uploadedFiles = st.file_uploader("Upload data:", type=['csv','xlsx'],accept_multiple_files=True,key="fileUploader")
 # If a dataset is uploaded, show a preview
-if data is not None:
-    data = pd.read_csv(data)
-    st.text("Data preview:")
-    st.dataframe(data.head())
+# if datuploadedFilea is not None:
+#     data = pd.read_csv(data)
+#     st.text("Data preview:")
+#     st.dataframe(data.head())
