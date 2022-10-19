@@ -17,6 +17,7 @@ else:
 
     if uploadedfiles is not None:
         for f in uploadedfiles:
+            st.title(f.name)
             data = pd.read_excel(f)
             survey_col_list = data_handler.slicer(data)
 
