@@ -10,8 +10,6 @@ def dropper(df):
     c_drop = df.filter(regex = 'modified').columns #selects modified_by as well
     return df.drop(columns = c_drop)
 
-df = pd.read_csv("0.88/browser_data.csv")
-
 def convert_df(df):
     return df.to_csv().encode('utf-8')
 
