@@ -11,3 +11,13 @@ st.sidebar.subheader("Data cleaning")
 scale = st.sidebar.checkbox("Scale", False, "scale")
 encode = st.sidebar.checkbox("Encode", False, "encode")
 impute = st.sidebar.checkbox("Impute", False, "impute")
+
+# Model options
+st.sidebar.subheader("Models")
+models = {
+    "gnb": st.sidebar.checkbox("Gaussian Naive Bayes", True, "gnb"),
+    "rf": st.sidebar.checkbox("Random Forest", True, "rf"),
+    "et": st.sidebar.checkbox("Extra-Trees", False, "et"),
+    "xgb": st.sidebar.checkbox("XGBoost", False, "xgb"),
+    "lgb": st.sidebar.checkbox("LightGBM", False, "lgb"),
+}
