@@ -12,7 +12,7 @@ st.json({"Assessment":
     "Past medical history",
     "Concomitant medications",
     "Current stroke information",
-    "Neurological: NIHSS",
+    {"Neurological": ["NIHSS"]},
     "Pre Stroke mRS",
     "Blood for biomarkers",
     "Laboratory tests"]
