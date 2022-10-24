@@ -1,5 +1,9 @@
 import streamlit as st
 
+st.write("""
+START-PrePARE
+(sub-study and stand alone)""")
+
 option = st.multiselect(
     'Which timepoints?',
     ('Baseline', 'T=0', '12-24 hours','Day 3-7','90 days','12 months'))
@@ -8,9 +12,6 @@ st.write(option)
 
 if 'Baseline' in option:
 
-    st.write("""
-START-PrePARE
-(sub-study and stand alone)""")
     st.write("""Baseline
 (recruitment up to 3 days post-stroke)""")
 
@@ -47,10 +48,9 @@ if '12-24 hours' in option:
 })
 
 if 'Day 3-7' in option:
-
     st.write("""Day 3-7
 (3-7 days post stroke onset, can be the same time point at recruitment)""")
-{"Assessments":
+    st.json({"Assessments":
     ["Blood for biomarkers",
         {"Neurological": ["NIHSS"]},
         {"Cognition": ["MoCA"]},
@@ -58,11 +58,10 @@ if 'Day 3-7' in option:
         {"Lifestyle":["Physical Risk Factors",{"Physical Activity": ["RAPA"]},"Diet Q"]},
             "Demographics",
         "Laboratory tests",
-        "Concomitant medications"]}
+        "Concomitant medications"]})
 
 
 if '90 days' in option:
-
     st.write("""90 days
 (+/- 7 days)""")
     st.json(
@@ -105,7 +104,6 @@ if '90 days' in option:
 )
 
 if '12 months' in option:
-
     st.write("""12 months
 (+/- 7 days)""")
     st.json({"Assessments":[{"Neurological": "NIHSS"},
