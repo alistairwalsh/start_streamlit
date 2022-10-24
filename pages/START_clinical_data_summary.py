@@ -1,5 +1,11 @@
 import streamlit as st
 
+option = st.selectbox(
+    'Which timepoints?',
+    ('Email', 'Home phone', 'Mobile phone'))
+
+st.write('You selected:', option)
+
 st.write("""
 START-PrePARE
 (sub-study and stand alone)""")
@@ -17,6 +23,8 @@ st.json({"Assessment":
     "Blood for biomarkers",
     "Laboratory tests"]
 })
+
+
 
 st.write("""T=0
 (2-3 hours after baseline if recruited <24 hrs)""")
