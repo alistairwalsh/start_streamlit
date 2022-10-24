@@ -6,6 +6,8 @@ option = st.multiselect(
 
 st.write('You selected:', option)
 
+st.write(option.values())
+
 st.write("""
 START-PrePARE
 (sub-study and stand alone)""")
