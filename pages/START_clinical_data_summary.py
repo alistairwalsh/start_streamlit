@@ -5,6 +5,18 @@ START-PrePARE
 (sub-study and stand alone)''')
 st.write('''Baseline
 (recruitment up to 3 days post-stroke)''')
+
+st.json({'Assessment':['Radiological scans and report',
+'Physical examination',
+'Past medical history',
+'Concomitant medications',
+'Current stroke information',
+'Neurological: NIHSS',
+'Pre Stroke mRS',
+'Blood for biomarkers',
+'Laboratory tests']
+})
+
 st.write('''T=0
 (2-3 hours after baseline if recruited <24 hrs)''')
 st.write('''12-24 hours
