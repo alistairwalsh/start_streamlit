@@ -6,13 +6,15 @@ option = st.multiselect(
 
 st.write(type(option))
 
-st.write("""
+if 'Baseline' in option:
+
+    st.write("""
 START-PrePARE
 (sub-study and stand alone)""")
-st.write("""Baseline
+    st.write("""Baseline
 (recruitment up to 3 days post-stroke)""")
 
-st.json({"Assessment":
+    st.json({"Assessment":
     ["Radiological scans and report",
     "Physical examination",
     "Past medical history",
