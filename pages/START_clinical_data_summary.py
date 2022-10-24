@@ -25,7 +25,7 @@ st.json({'Assessment':['Blood for biomarkers',
 
 st.write('''12-24 hours
 (12-24 hrs post T=0 or 12-24 hrs for those recruited > 24 hrs post stroke and < 48 hrs)''')
-st.json({'Assessment':[{'Neurological': ['NIHSS']}
+st.json({'Assessment':[{'Neurological': ['NIHSS']},
 'Blood for biomarkers',
 'Laboratory tests']
 })
