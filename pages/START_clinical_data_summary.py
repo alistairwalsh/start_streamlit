@@ -32,6 +32,17 @@ st.json({'Assessment':[{'Neurological': ['NIHSS']},
 
 st.write('''Day 3-7
 (3-7 days post stroke onset, can be the same time point at recruitment)''')
+{'Assessments':['Blood for biomarkers',
+        {'Neurological': ['NIHSS']},
+        {'Cognition': ['MoCA']},
+        {'Depression': ['History of depression (pre-stroke)', 'MADRS']},
+        {'Lifestyle':['Physical Risk Factors',{'Physical Activity': ['RAPA']},
+        'Diet Q',
+        'Demographics',
+        'Laboratory tests',
+        'Concomitant medications']}]}
+
+
 st.write('''90 days
 (+/- 7 days)''')
 st.write('''12 months
