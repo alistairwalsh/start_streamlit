@@ -27,23 +27,28 @@ START-PrePARE
 })
 
 
+if 'T=0' in option:
 
-st.write("""T=0
+    st.write("""T=0
 (2-3 hours after baseline if recruited <24 hrs)""")
-st.json({"Assessment":
+    st.json({"Assessment":
     ["Blood for biomarkers",
     "Laboratory tests"
 ]})
 
-st.write("""12-24 hours
+if '12-24 hours' in option:
+
+    st.write("""12-24 hours
 (12-24 hrs post T=0 or 12-24 hrs for those recruited > 24 hrs post stroke and < 48 hrs)""")
-st.json({"Assessment":
+    st.json({"Assessment":
     [{"Neurological": ["NIHSS"]},
     "Blood for biomarkers",
     "Laboratory tests"]
 })
 
-st.write("""Day 3-7
+if 'Day 3-7' in option:
+
+    st.write("""Day 3-7
 (3-7 days post stroke onset, can be the same time point at recruitment)""")
 {"Assessments":
     ["Blood for biomarkers",
@@ -56,9 +61,11 @@ st.write("""Day 3-7
         "Concomitant medications"]}
 
 
-st.write("""90 days
+if '90 days' in option:
+
+    st.write("""90 days
 (+/- 7 days)""")
-st.json(
+    st.json(
     {"Assessments":
     [{"Neurological": ["NIHSS"]},
 "Physical examination",
@@ -97,9 +104,11 @@ st.json(
 }
 )
 
-st.write("""12 months
+if '12 months' in option:
+
+    st.write("""12 months
 (+/- 7 days)""")
-st.json({"Assessments":[{"Neurological": "NIHSS"},
+    st.json({"Assessments":[{"Neurological": "NIHSS"},
 "Physical examination",
 {"Lifestyle":
 ["Physical Risk Factors",
