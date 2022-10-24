@@ -6,7 +6,7 @@ START-PrePARE
 
 option = st.multiselect(
     'Which timepoints?',
-    ('Baseline', 'T=0', '12-24 hours','Day 3-7','90 days','12 months'))
+    ('Baseline', 'T=0', '12-24 hours','Day 3-7','90 days','12 months'),0)
 
 
 if 'Baseline' in option:
