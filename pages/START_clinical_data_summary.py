@@ -2,7 +2,7 @@ import streamlit as st
 
 option = st.selectbox(
     'Which timepoints?',
-    ('Email', 'Home phone', 'Mobile phone'))
+    ('Baseline', 'T=0', '12-24 hours'))
 
 st.write('You selected:', option)
 
