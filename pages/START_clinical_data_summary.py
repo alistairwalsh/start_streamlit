@@ -6,7 +6,7 @@ option = st.multiselect(
 
 st.write('You selected:', option)
 
-st.write([k.values() for k in option])
+st.write([k for k in option])
 
 st.write("""
 START-PrePARE
