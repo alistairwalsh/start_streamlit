@@ -2,7 +2,7 @@ import streamlit as st
 
 st.write('''
 START-PrePARE
-(sub-study and stand alone)
+(sub-study and stand alone)'''
 st.write('''Baseline
 (recruitment up to 3 days post-stroke)''')
 st.write('''T=0
