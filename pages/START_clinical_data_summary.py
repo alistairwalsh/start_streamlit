@@ -4,9 +4,7 @@ option = st.multiselect(
     'Which timepoints?',
     ('Baseline', 'T=0', '12-24 hours','Day 3-7','90 days','12 months'))
 
-st.write('You selected:', option)
-
-st.write([k for k in option])
+st.write([type(k) for k in option])
 
 st.write("""
 START-PrePARE
