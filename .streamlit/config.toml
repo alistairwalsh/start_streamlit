@@ -1,2 +1,2 @@
 [global]
-dataFrameSerialization = "Legacy"
+STREAMLIT_dataFrameSerialization = "Legacy"
