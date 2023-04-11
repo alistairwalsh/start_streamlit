@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from google.oauth2 import service_account
 from gsheetsdb import connect
 
@@ -25,6 +26,8 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 st.write(type(rows))
 
 st.write(rows)
+
+st.dataframe(pd.DataFrame(rows))
 
 # # Print results.
 # for row in rows:
