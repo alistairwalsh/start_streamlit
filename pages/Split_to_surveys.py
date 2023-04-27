@@ -18,7 +18,7 @@ else:
     st.write(type(uploadedfiles))
     option = st.multiselect(
     'Which timepoints?',
-    (uploadedfiles))
+    ([f.name for f in uploadedfiles]))
 
     if uploadedfiles is not None:
         for f in uploadedfiles:
