@@ -12,12 +12,13 @@ if 'fileUploader' not in st.session_state:
     st.write('Please upload a datafile at home page')
 
 else:
-    option = st.multiselect(
-    'Which timepoints?',
-    ('Baseline', 'T=0', '12-24 hours','Day 3-7','90 days','12 months'),default = 'Baseline')
+    
     
     uploadedfiles = st.session_state.fileUploader
     st.write(type(uploadedfiles))
+    option = st.multiselect(
+    'Which timepoints?',
+    (uploadedfiles))
 
     if uploadedfiles is not None:
         for f in uploadedfiles:
